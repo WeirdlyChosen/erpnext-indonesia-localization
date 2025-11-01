@@ -227,7 +227,7 @@ def mapping_sales_invoices(invoice_docs, company_doc, doc):
 				"code": frappe.get_value("CoreTax Barang Jasa Ref", item["kode_barang_jasa_ref"], "code"),
 				"name": item["item_name"],
 				"unit": item["unit_ref"],
-				"price": item["rate"],
+				"price": item["rate"] + item["discount_amount"],
 				"qty": item["qty"],
 				"total_discount": item["discount_amount"] * item["qty"],
 				"tax_base": item["net_amount"],
