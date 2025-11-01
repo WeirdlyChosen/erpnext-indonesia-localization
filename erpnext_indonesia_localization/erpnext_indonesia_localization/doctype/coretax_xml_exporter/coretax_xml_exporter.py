@@ -224,7 +224,12 @@ def mapping_sales_invoices(invoice_docs, company_doc, doc):
 
 			invoice_entry["items"].append({
 				"opt": item["kode_barang_jasa_opt"],
+<<<<<<< HEAD
 				"code": frappe.get_value("CoreTax Barang Jasa Ref", item["kode_barang_jasa_ref"], "code"),
+=======
+				# "code": item["kode_barang_jasa_ref"],
+				"code": (item["kode_barang_jasa_ref"])[:6],
+>>>>>>> origin/develop
 				"name": item["item_name"],
 				"unit": item["unit_ref"],
 				"price": item["rate"] + item["discount_amount"],
